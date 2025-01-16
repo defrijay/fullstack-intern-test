@@ -1,1 +1,3 @@
-"# fullstack-intern-test" 
+# Backend & Frontend Developer Test for PT Aksamedia Mulia Digital
+
+This repository contains the solution for the Backend and Frontend Developer internship test at PT Aksamedia Mulia Digital. The project involves creating a set of APIs using Laravel and a frontend web application using Vue.js. The system is designed to manage authentication, CRUD operations for employees and divisions, and also includes a responsive frontend application.

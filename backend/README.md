@@ -1,47 +1,179 @@
-# Vue.js Authentication and CRUD Application
+# Fullstack Intern Backend Test - PT Aksamedia Mulia Digital - Backend
 
-This is a Vue.js-based web application that demonstrates the use of authentication, CRUD operations, and state persistence using local storage, without relying on external APIs. The app includes features like dark/light mode, search/filter, pagination, and a user profile page.
+This repository contains the implementation for the Backend Developer Intern test at PT Aksamedia Mulia Digital, where the task is to create APIs with Laravel and MySQL/MariaDB.
 
-## Features
+## Tech Stack
 
-- **Login / Authentication**: Users can log in with a static username and password, and their authentication status is persisted even after page reloads.
-- **Profile Edit**: Users can edit their profile information (full name), and changes will be saved persistently.
-- **CRUD Operations**: Simple CRUD functionality without an API. Data is stored in local storage or IndexedDB.
-- **Search and Filter**: Users can search/filter data, and the search state is retained across page refreshes.
-- **Pagination**: Implemented pagination for the CRUD data, allowing users to navigate through pages of data.
-- **Dark Mode / Light Mode**: Users can toggle between light and dark modes. The app also follows the OS theme by default.
-- **Responsive Design**: The application is responsive and works across devices like desktop, tablet, and mobile.
+### Backend:
+- **Laravel**: PHP framework for building the API.
+- **MySQL**: Database system for storing data.
+- **PhpMyAdmin**: Database management tools.
 
-## Installation
+### Development Tools:
+- **Postman**: Used for testing the API endpoints.
+- **Node.js**: JavaScript runtime used for running the frontend development server.
+- **npm**: Package manager used to manage frontend dependencies.
 
-1. Clone the repository
+## API Features
 
-   ```bash
-   git clone https://github.com/defrijay/fullstack-intern-test.git
-   ```
+### Task 1 - API Login
+- **Endpoint**: `/login`
+- **Method**: `POST`
+- **Request Format**:
+  ```json
+  {
+    "username": "admin",
+    "password": "pastibisa"
+  }
+- **Response Format**:
+  ```json
+  {
+    "status": "success / error",
+    "message": "pesan sukses / error",
+    "data": {
+        "token": "token untuk autentikasi",
+        "admin": {
+            "id": "uuid admin",
+            "name": "nama admin",
+            "username": "username admin",
+            "phone": "no telepon admin",
+            "email": "email admin",
+            },
+        }
+    }
 
-2. Go into the folder
+### Task 2 - API Division
+- **Endpoint**: `/divisions`
+- **Method**: `GET`
+- **Request Format**:
+  ```json
+  {
+    "name": "pencarian nama",
+  }
+- **Response Format**:
+  ```json
+    {
+    "status": "success / error",
+    "message": "pesan sukses / error",
+    "data": {
+        "divisions": [
+            {
+                "id": "uuid divisi",
+                "name": "nama divisi",
+            },
+            {
+                "id": "uuid divisi",
+                "name": "nama divisi",
+            }
+        ],
+    },
+    "pagination": {
+        "berisikan attribute pagination laravel":"..."
+    },
+    }
 
-   ```bash
-   cd fullstack-intern-test
-   ```
+### Task 3 - API Employees
+- **Endpoint**: `/employees`
+- **Method**: `GET`
+- **Request Format**:
+  ```json
+  {
+    "name": "pencarian nama",
+    "division_id": "filter berdasarkan divisi",
+  }
+- **Response Format**:
+  ```json
+    {
+        "status": "success / error",
+        "message": "pesan sukses / error",
+        "data": {
+            "employees": [
+                {
+                    "id": "uuid pegawai",
+                    "image": "url foto pegawai",
+                    "name": "nama pegawai",
+                    "phone": "no telepon pegawai",
+                    "division": {
+                        "id": "uuid divisi",
+                        "name": "nama divisi"
+                    },
+                    "position": "jabatan pegawai",
+                },
+                {
+                    "id": "uuid pegawai",
+                    "image": "url foto pegawai",
+                    "name": "nama pegawai",
+                    "phone": "no telepon pegawai",
+                    "division": {
+                        "id": "uuid divisi",
+                        "name": "nama divisi"
+                    },
+                    "position": "jabatan pegawai",
+                }
+            ],
+        },
+        "pagination": {
+            "berisikan attribute pagination laravel":"..."
+        },
+    }
 
-3. Install NPM
+### Task 4 - API Employees
+- **Endpoint**: `/employees`
+- **Method**: `POST`
+- **Request Format**:
+  ```json
+  {
+    "image": "file foto pegawai",
+    "name": "nama pegawai",
+    "phone": "no telepon pegawai",
+    "division": "uuid divisi",
+    "position": "jabatan pegawai",
+   }
 
-   ```bash
-   npm install
-   ```
+- **Response Format**:
+  ```json
+    {
+      "status": "success / error",
+      "message": "pesan sukses / error",
+    }
 
-4. Run the NPM
+### Task 5 - API Employees
+- **Endpoint**: `/employees`
+- **Method**: `PUT`
+- **Request Format**:
+  ```json
+   {
+    "image": "file foto pegawai",
+    "name": "nama pegawai",
+    "phone": "no telepon pegawai",
+    "division": "uuid divisi",
+    "position": "jabatan pegawai",
+   }
 
-   ```bash
-   npm run dev
-   ```
 
-## Login
-Login Using username and password in below
+- **Response Format**:
+  ```json
+    {
+    "status": "success / error",
+    "message": "pesan sukses / error",
+    }
 
-   ```bash
-   username : admin
-   password : password
-   ```
+### Task 6 - API Employees
+- **Endpoint**: `/employees`
+- **Method**: `DELETE`
+- **Request Format**:
+  ```json
+   {
+    "status": "success / error",
+    "message": "pesan sukses / error",
+    }
+
+### Task 7 - API Employees
+- **Endpoint**: `/employees`
+- **Method**: `PUT`
+- **Request Format**:
+  ```json
+   {
+    "status": "success / error",
+    "message": "pesan sukses / error",
+    }

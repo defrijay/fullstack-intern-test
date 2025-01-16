@@ -1,4 +1,4 @@
-# Vue.js Authentication and CRUD Application
+# Fullstack Intern Backend Test - PT Aksamedia Mulia Digital - Frontend
 
 This is a Vue.js-based web application that demonstrates the use of authentication, CRUD operations, and state persistence using local storage, without relying on external APIs. The app includes features like dark/light mode, search/filter, pagination, and a user profile page.
 
