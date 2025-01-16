@@ -2,6 +2,21 @@
 
 This is a Vue.js-based web application that demonstrates the use of authentication, CRUD operations, and state persistence using local storage, without relying on external APIs. The app includes features like dark/light mode, search/filter, pagination, and a user profile page.
 
+## Tech Stack
+
+- **Frontend**:
+  - **Vue.js**: JavaScript framework used for building the user interface.
+  - **Vuex**: State management for managing the authentication state and user data.
+  - **Vue Router**: For handling routing between pages like login, profile edit, and home page.
+  - **Tailwind CSS**: Utility-first CSS framework for styling the components, providing a responsive design and modern look.
+  
+- **State Management**:
+  - **LocalStorage**: Used to persist authentication state and user data between page reloads.
+  
+- **Development Tools**:
+  - **Node.js**: JavaScript runtime used for running the development server.
+  - **npm**: Package manager used to manage dependencies.
+
 ## Features
 
 - **Login / Authentication**: Users can log in with a static username and password, and their authentication status is persisted even after page reloads.
