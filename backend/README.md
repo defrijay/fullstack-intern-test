@@ -1,6 +1,6 @@
 # Fullstack Intern Backend Test - PT Aksamedia Mulia Digital - Backend
 
-This repository contains the implementation for the Backend Developer Intern test at PT Aksamedia Mulia Digital, where the task is to create APIs with Laravel and MySQL/MariaDB.
+This repository contains the implementation for the Backend Developer Intern test at PT Aksamedia Mulia Digital, where the task is to create APIs with Laravel and MySQL.
 
 ## Tech Stack
 

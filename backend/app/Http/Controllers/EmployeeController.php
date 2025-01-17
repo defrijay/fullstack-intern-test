@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Employee;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+
 
 class EmployeeController extends Controller
 {
@@ -38,7 +41,7 @@ class EmployeeController extends Controller
     ]);
 
     $employee = Employee::create([
-        'id' => \Str::uuid(),
+        'id' => Str::uuid(),
         'image' => $request->file('image') ? $request->file('image')->store('employees') : null,
         'name' => $validated['name'],
         'phone' => $validated['phone'],
